@@ -20,7 +20,7 @@ jobs:
 
       - name: Build images
         run: |
-          docker build ./simpletestapp --tag $IMAGE_NAME:$IMAGE_TAG --label "runnumber=${GITHUB_RUN_ID}"
+          docker build . --tag $IMAGE_NAME:$IMAGE_TAG --label "runnumber=${GITHUB_RUN_ID}"
           docker images
 
       - name: Login to Github Packages
