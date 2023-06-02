@@ -35,5 +35,5 @@ jobs:
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
 
           docker tag $IMAGE_ID $IMAGE_NAME:$IMAGE_TAG
-          docker push $IMAGE_ID
+          docker push $IMAGE_ID:$IMAGE_TAG
 
