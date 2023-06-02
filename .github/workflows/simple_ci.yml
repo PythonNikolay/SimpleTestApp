@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  IMAGE_NAME: SimpleTestApp
+  IMAGE_NAME: simpletestapp
   IMAGE_TAG: 1.0
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Build images
         run: |
-          docker build ./SimpleTestApp --tag $IMAGE_NAME:$IMAGE_TAG --label "runnumber=${GITHUB_RUN_ID}"
+          docker build ./simpletestapp --tag $IMAGE_NAME:$IMAGE_TAG --label "runnumber=${GITHUB_RUN_ID}"
           docker images
 
       - name: Login to Github Packages
